@@ -1,0 +1,359 @@
+/* ===================================================================
+   ISB Pitch Deck — editorial-tech keynote system
+   Navy + off-white + single amber accent. Flat fields, no decorative
+   gradients (the deck must obey the argument it makes).
+   =================================================================== */
+
+/* Fonts loaded via <link> in index.html (Fontshare: Clash Display + Satoshi) */
+
+:root {
+  /* palette */
+  --navy:        #0A1F44;   /* deep field */
+  --navy-2:      #0E2A57;   /* raised navy surface */
+  --navy-3:      #12306B;   /* lighter navy, accents on dark */
+  --ink:         #0A1428;   /* near-black for device bezels */
+  --paper:       #F7F8FA;   /* off-white light field */
+  --paper-2:     #ECEFF4;   /* light inset */
+  --line-light:  #DFE3EA;   /* hairline on light */
+  --line-dark:   rgba(255,255,255,0.14); /* hairline on dark */
+  --amber:       #F5A623;   /* the one accent */
+  --amber-soft:  rgba(245,166,35,0.14);
+  --green:       #1FA463;
+  --green-soft:  rgba(31,164,99,0.14);
+  --red:         #E0524C;
+  --red-soft:    rgba(224,82,76,0.13);
+
+  --t-on-dark:   #F7F8FA;
+  --t-on-dark-2: #9FB0CC;   /* muted on navy */
+  --t-on-light:  #0A1F44;
+  --t-on-light-2:#586079;   /* muted on paper */
+
+  /* type */
+  --display: 'Clash Display', 'Satoshi', system-ui, sans-serif;
+  --body:    'Satoshi', system-ui, -apple-system, sans-serif;
+
+  /* rhythm */
+  --gutter: 110px;          /* slide horizontal padding */
+  --pad-y:  92px;
+}
+
+/* ---- stage / deck shell ---- */
+deck-stage:not(:defined) { visibility: hidden; }
+html, body { margin: 0; background: #05101f; }
+deck-stage { background: #05101f; }
+
+section {
+  font-family: var(--body);
+  color: var(--t-on-light);
+  background: var(--paper);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+section * { box-sizing: border-box; }
+
+/* tabular numerals everywhere numbers matter */
+.tnum { font-feature-settings: 'tnum' 1, 'lnum' 1; font-variant-numeric: tabular-nums; }
+
+/* theme variants */
+.s-dark  { background: var(--navy);  color: var(--t-on-dark); }
+.s-light { background: var(--paper); color: var(--t-on-light); }
+.s-pad   { padding: var(--pad-y) var(--gutter); }
+
+/* ---- shared type ---- */
+h1,h2,h3,p { margin: 0; }
+.kicker {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.s-light .kicker { color: var(--navy-3); }
+.display {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+}
+.lead { font-size: 25px; line-height: 1.5; color: var(--t-on-light-2); font-weight: 500; }
+.s-dark .lead { color: var(--t-on-dark-2); }
+.amber { color: var(--amber); }
+
+/* eyebrow page number rail */
+.slide-no {
+  position: absolute; bottom: 46px; right: 56px;
+  font-family: var(--body); font-weight: 600; font-size: 15px;
+  letter-spacing: 0.16em; color: var(--t-on-light-2);
+  display: flex; align-items: center; gap: 12px;
+}
+.s-dark .slide-no { color: var(--t-on-dark-2); }
+.slide-no::before {
+  content: ''; width: 46px; height: 2px; background: currentColor; opacity: 0.5;
+}
+.brand-tag {
+  position: absolute; bottom: 46px; left: 56px;
+  font-family: var(--body); font-weight: 600; font-size: 14px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--t-on-light-2);
+}
+.s-dark .brand-tag { color: var(--t-on-dark-2); }
+
+/* ---- pills ---- */
+.pill {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 9px 18px; border-radius: 999px;
+  font-weight: 700; font-size: 15px; letter-spacing: 0.02em;
+  border: 1.5px solid var(--line-light); color: var(--t-on-light);
+}
+.s-dark .pill { border-color: var(--line-dark); color: var(--t-on-dark); }
+.pill.amber-pill { background: var(--amber); border-color: var(--amber); color: #2A1A00; }
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); }
+
+/* ---- device / phone mockup ---- */
+.phone {
+  position: relative;
+  background: var(--ink);
+  border-radius: 42px;
+  padding: 9px;
+  box-shadow: 0 40px 90px -30px rgba(3,10,24,0.7), 0 6px 20px rgba(3,10,24,0.4);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.phone img { display: block; width: 100%; border-radius: 34px; }
+.phone::after { /* subtle screen sheen, flat overlay not a decorative gradient */
+  content: ''; position: absolute; inset: 9px; border-radius: 34px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06); pointer-events: none;
+}
+.phone.sm { width: 246px; }
+.phone.md { width: 300px; }
+.phone.lg { width: 348px; }
+
+/* floating caption tag that points at a mockup */
+.callout {
+  position: absolute; display: flex; align-items: center; gap: 10px;
+  background: #fff; color: var(--navy); border-radius: 12px;
+  padding: 12px 16px; font-weight: 700; font-size: 16px;
+  box-shadow: 0 14px 34px -10px rgba(3,10,24,0.35);
+  border: 1px solid var(--line-light); white-space: nowrap;
+}
+.callout .ic { width: 20px; height: 20px; color: var(--navy-3); }
+.callout::before {
+  content: ''; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--amber); box-shadow: 0 0 0 4px var(--amber-soft);
+}
+
+/* ---- image placeholder drop-zones (only where no real asset exists) ---- */
+.ph {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  border: 2px dashed rgba(10,31,68,0.4); border-radius: 16px;
+  color: var(--navy-3); font-weight: 700; font-size: 15px; letter-spacing: 0.04em;
+  background: rgba(10,31,68,0.03); padding: 18px; line-height: 1.4;
+}
+.s-dark .ph { border-color: rgba(255,255,255,0.28); color: var(--t-on-dark-2); background: rgba(255,255,255,0.03); }
+
+/* ---- stat block ---- */
+.stat .num { font-family: var(--display); font-weight: 600; line-height: 0.9; letter-spacing: -0.02em; }
+.stat .lbl { font-weight: 600; color: var(--t-on-light-2); font-size: 17px; margin-top: 8px; }
+.s-dark .stat .lbl { color: var(--t-on-dark-2); }
+
+/* ---- generic card ---- */
+.card {
+  background: #fff; border: 1px solid var(--line-light); border-radius: 20px;
+  box-shadow: 0 2px 14px rgba(10,31,68,0.05);
+}
+.s-dark .card { background: var(--navy-2); border-color: var(--line-dark); box-shadow: none; }
+
+/* dark highlight KPI card */
+.kpi {
+  background: var(--ink); color: var(--t-on-dark); border-radius: 22px;
+  padding: 30px 32px; box-shadow: 0 30px 70px -28px rgba(3,10,24,0.7);
+  position: relative; overflow: hidden;
+}
+.kpi .big { font-family: var(--display); font-weight: 600; font-size: 76px; line-height: 0.9; letter-spacing: -0.02em; }
+.kpi .big .amber { color: var(--amber); }
+.kpi .sub { color: var(--t-on-dark-2); font-size: 18px; font-weight: 500; margin-top: 12px; }
+.kpi .live-dot {
+  display: inline-block; width: 13px; height: 13px; border-radius: 50%;
+  background: var(--green); margin-right: 12px; vertical-align: middle;
+}
+
+/* ===================================================================
+   ENTRANCE ANIMATION SYSTEM
+   Visible end-state is the BASE style; we animate FROM hidden only when
+   the slide is active and motion is allowed. Print/reduced-motion = static.
+   =================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  section[data-deck-active] [data-rise] {
+    animation: rise 0.72s cubic-bezier(0.16,0.84,0.28,1) both;
+    animation-delay: var(--d, 0ms);
+  }
+  section[data-deck-active] [data-fade] {
+    animation: fadein 0.8s ease both; animation-delay: var(--d, 0ms);
+  }
+  section[data-deck-active] [data-scale] {
+    animation: scalein 0.9s cubic-bezier(0.16,0.84,0.28,1) both; animation-delay: var(--d, 0ms);
+  }
+  section[data-deck-active] [data-wipe] {
+    animation: wipe 0.9s cubic-bezier(0.16,0.84,0.28,1) both; animation-delay: var(--d, 0ms);
+  }
+  /* before they animate, hold hidden so there's no flash pre-activation */
+  section:not([data-deck-active]) [data-rise],
+  section:not([data-deck-active]) [data-fade],
+  section:not([data-deck-active]) [data-scale],
+  section:not([data-deck-active]) [data-wipe] { opacity: 0; }
+}
+@keyframes rise   { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: none; } }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scalein{ from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: none; } }
+@keyframes wipe   { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+
+/* parallax layers get smoothed transforms set via JS custom props */
+[data-depth] { transform: translate3d(var(--px,0), var(--py,0), 0); transition: transform 0.18s ease-out; will-change: transform; }
+
+/* ---- layout utilities ---- */
+.layer { position: absolute; inset: 0; }
+.p-slide { padding: 88px 110px; }
+.fill { position: absolute; inset: 0; }
+.flex { display: flex; }
+.col { display: flex; flex-direction: column; }
+.between { justify-content: space-between; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.grow { flex: 1; }
+.rel { position: relative; }
+
+/* brand chip — white card so the navy ISB logo reads on dark fields */
+.brand-chip {
+  display: inline-flex; align-items: center; background: #fff;
+  border-radius: 14px; padding: 9px 15px; box-shadow: 0 8px 22px -12px rgba(3,10,24,0.5);
+}
+.brand-chip img { height: 38px; display: block; }
+
+/* presenter row */
+.presenter { display: flex; align-items: center; gap: 16px; }
+.presenter .pic { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--amber); }
+.presenter .nm { font-weight: 700; font-size: 19px; }
+.presenter .ct { font-size: 15px; color: var(--t-on-dark-2); font-weight: 500; }
+.s-light .presenter .ct { color: var(--t-on-light-2); }
+
+/* ---- old -> new morph (cross-dissolve between two stacked layers) ---- */
+.morph { position: relative; cursor: pointer; }
+.morph .morph-layer {
+  transition: opacity 0.7s cubic-bezier(0.16,0.84,0.28,1), transform 0.7s cubic-bezier(0.16,0.84,0.28,1);
+}
+.morph .morph-layer.is-old { position: relative; opacity: 1; transform: none; }
+.morph .morph-layer.is-new { position: absolute; inset: 0; opacity: 0; transform: scale(1.04); }
+.morph.is-new .morph-layer.is-old { opacity: 0; transform: scale(0.97); }
+.morph.is-new .morph-layer.is-new { opacity: 1; transform: none; }
+.morph-toggle {
+  position: absolute; left: 50%; bottom: -54px; transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 10px; z-index: 5;
+  background: #fff; border: 1px solid var(--line-light); border-radius: 999px;
+  padding: 9px 16px 9px 14px; font-family: var(--body); font-weight: 700; font-size: 14px;
+  color: var(--navy); box-shadow: 0 10px 26px -10px rgba(3,10,24,0.35); white-space: nowrap;
+}
+.morph-toggle .swatch { width: 26px; height: 16px; border-radius: 4px; }
+
+/* state badge that sits on a mockup (old=red, new=green) */
+.tag-state {
+  position: absolute; top: 18px; left: 18px; z-index: 4;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 13px; border-radius: 999px; font-weight: 700; font-size: 14px;
+  backdrop-filter: blur(4px);
+}
+.tag-state.old { background: var(--red-soft); color: #fff; outline: 1.5px solid rgba(224,82,76,0.6); }
+.tag-state.new { background: rgba(31,164,99,0.18); color: #fff; outline: 1.5px solid rgba(31,164,99,0.7); }
+.tag-state .d { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+
+/* numbered index rows (agenda) */
+.idx-row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px;
+  padding: 28px 4px; border-top: 1px solid var(--line-light); }
+.s-dark .idx-row { border-color: var(--line-dark); }
+.idx-row .n { font-family: var(--display); font-weight: 600; font-size: 30px; color: var(--amber); width: 58px; }
+.idx-row .t { font-family: var(--display); font-weight: 600; font-size: 34px; letter-spacing: -0.01em; }
+.idx-row .meta { font-size: 16px; color: var(--t-on-light-2); font-weight: 600; }
+.s-dark .idx-row .meta { color: var(--t-on-dark-2); }
+
+/* ---- statement slide ---- */
+.statement { font-family: var(--display); font-weight: 600; font-size: 132px; line-height: 0.96; letter-spacing: -0.025em; max-width: 1500px; }
+.statement .amber { color: var(--amber); }
+
+/* ---- issue cards ---- */
+.issue-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.issue { padding: 26px 22px; border-radius: 18px; background: var(--navy-2); border: 1px solid var(--line-dark); }
+.s-light .issue { background: #fff; border-color: var(--line-light); box-shadow: 0 2px 14px rgba(10,31,68,0.05); }
+.issue .ic { width: 30px; height: 30px; color: var(--amber); margin-bottom: 18px; }
+.issue h3 { font-family: var(--display); font-weight: 600; font-size: 21px; line-height: 1.08; margin-bottom: 10px; }
+.issue p { font-size: 15.5px; line-height: 1.4; color: var(--t-on-dark-2); }
+.s-light .issue p { color: var(--t-on-light-2); }
+
+/* ---- value cards (slide 12) ---- */
+.value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.value { display: flex; gap: 22px; align-items: center; padding: 24px; border-radius: 20px; background: var(--navy-2); border: 1px solid var(--line-dark); }
+.value .thumb { width: 96px; flex: none; border-radius: 14px; overflow: hidden; background: var(--ink); }
+.value .thumb img { display: block; width: 100%; }
+.value .ic-wrap { width: 96px; height: 124px; flex: none; border-radius: 14px; background: var(--amber-soft); display: flex; align-items: center; justify-content: center; }
+.value .ic-wrap svg { width: 42px; height: 42px; color: var(--amber); }
+.value h3 { font-family: var(--display); font-weight: 600; font-size: 25px; margin-bottom: 8px; }
+.value p { font-size: 16.5px; line-height: 1.45; color: var(--t-on-dark-2); }
+
+/* ---- flagship columns (slide 14) ---- */
+.flag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.flag { background: #fff; border: 1px solid var(--line-light); border-radius: 22px; padding: 34px 30px; display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(10,31,68,0.05); }
+.flag .n { font-family: var(--display); font-weight: 600; font-size: 22px; color: var(--amber); margin-bottom: 18px; }
+.flag h3 { font-family: var(--display); font-weight: 600; font-size: 30px; line-height: 1.04; letter-spacing: -0.01em; margin-bottom: 16px; }
+.flag .scenario { font-size: 17px; line-height: 1.5; color: var(--t-on-light-2); }
+.flag .vs { margin-top: auto; padding-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+.vs-line { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 16px; }
+.vs-line .badge { width: 24px; height: 24px; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex: none; }
+.vs-line.old .badge { background: var(--red-soft); color: var(--red); }
+.vs-line.new .badge { background: var(--green-soft); color: var(--green); }
+.vs-line.old { color: var(--t-on-light-2); }
+.vs-line svg { width: 15px; height: 15px; }
+
+/* ---- roadmap grid (slide 15) ---- */
+.road-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.road { display: flex; gap: 16px; align-items: flex-start; padding: 22px 20px; border-radius: 16px; background: var(--navy-2); border: 1px solid var(--line-dark); }
+.road .n { font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--amber); flex: none; padding-top: 2px; }
+.road h3 { font-weight: 700; font-size: 18px; margin-bottom: 5px; }
+.road p { font-size: 14px; line-height: 1.4; color: var(--t-on-dark-2); }
+
+/* ---- method flow (slide 16) ---- */
+.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; align-items: stretch; }
+.step { position: relative; padding: 30px 28px; }
+.step:not(:last-child)::after {
+  content: ''; position: absolute; top: 52px; right: -1px; width: 2px; height: calc(100% - 60px);
+  background: var(--line-light);
+}
+.step .sn { width: 50px; height: 50px; border-radius: 50%; background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 600; font-size: 22px; margin-bottom: 20px; }
+.step h3 { font-family: var(--display); font-weight: 600; font-size: 23px; line-height: 1.08; margin-bottom: 12px; }
+.step p { font-size: 16px; line-height: 1.48; color: var(--t-on-light-2); }
+.step .out { display: inline-block; margin-top: 14px; font-size: 13.5px; font-weight: 700; color: var(--navy-3);
+  background: var(--paper-2); padding: 6px 12px; border-radius: 999px; }
+
+/* ---- proposal columns (slide 17) ---- */
+.prop-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 30px; }
+.prop { border-radius: 24px; padding: 44px 40px; display: flex; flex-direction: column; }
+.prop.primary { background: var(--amber); color: #2A1A00; }
+.prop.secondary { background: var(--navy-2); color: var(--t-on-dark); border: 1px solid var(--line-dark); }
+.prop .tier { font-weight: 700; font-size: 16px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+.prop h3 { font-family: var(--display); font-weight: 600; font-size: 44px; line-height: 0.98; letter-spacing: -0.015em; margin: 14px 0 20px; }
+.prop ul { list-style: none; padding: 0; margin: 0 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.prop li { display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.4; font-weight: 500; }
+.prop li svg { width: 20px; height: 20px; flex: none; margin-top: 2px; }
+.prop .foot { margin-top: 34px; font-size: 17px; font-weight: 600; opacity: 0.82; }
+.prop.primary .badge-default { align-self: flex-start; background: #2A1A00; color: var(--amber); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px; margin-bottom: 22px; }
+
+/* timeline (slide 7) */
+.timeline { display: flex; align-items: center; gap: 0; }
+.tl-node { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; flex: none; width: 150px; }
+.tl-node .dot { width: 20px; height: 20px; border-radius: 50%; background: var(--line-light); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--line-light); }
+.tl-node.is-now .dot { background: var(--amber); box-shadow: 0 0 0 2px var(--amber), 0 0 0 8px var(--amber-soft); }
+.tl-node .yr { font-weight: 700; font-size: 15px; color: var(--t-on-light-2); }
+.tl-node .lb { font-family: var(--display); font-weight: 600; font-size: 19px; }
+.tl-bar { flex: 1; height: 2px; background: var(--line-light); }
+
+/* feature thumb strip helper */
+.fan { position: relative; }

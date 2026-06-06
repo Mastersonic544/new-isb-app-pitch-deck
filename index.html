@@ -1,0 +1,472 @@
+<!-- @dsCard group="Pitch Deck" viewport="1280x720" name="ISB Board Pitch — 18 slides" subtitle="Editorial-tech keynote · animated · real app screenshots" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rethinking the ISB Student App — Pitch</title>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="deck.css" />
+<style>deck-stage:not(:defined){visibility:hidden}</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#0A1F44"/>
+    <rect x="34" y="28" width="32" height="44" rx="6" fill="none" stroke="#F7F8FA" stroke-width="2.5"/>
+    <rect x="40" y="36" width="20" height="4" rx="2" fill="#F5A623"/>
+    <rect x="40" y="44" width="14" height="3" rx="1.5" fill="#9FB0CC"/>
+    <circle cx="50" cy="62" r="4" fill="#F5A623"/>
+  </svg>
+</template>
+
+<deck-stage width="1920" height="1080">
+
+  <!-- ============================ 1 · TITLE ============================ -->
+  <section class="s-dark" data-screen-label="01 Title">
+    <div class="layer p-slide flex" style="gap:60px;align-items:center">
+      <!-- left -->
+      <div class="col" style="width:54%;gap:26px">
+        <div data-rise style="--d:0ms"><span class="brand-chip"><img src="assets/isb-logo.png" alt="ISB" /></span></div>
+        <div class="flex" style="gap:12px" data-rise style="--d:80ms">
+          <span class="pill"><span class="dot"></span>Presentation</span>
+          <span class="pill"><span class="dot"></span>App Product</span>
+        </div>
+        <h1 class="display" style="font-size:98px;margin-top:4px" data-rise>Rethinking the<br/>ISB Student App<span class="amber">.</span></h1>
+        <p class="lead" style="max-width:660px" data-rise style="--d:120ms">From daily frustration to a real product opportunity — a student's perspective, a working redesign, and a concrete proposal to make the ISB app something students actually want to open.</p>
+        <div class="presenter" style="margin-top:10px" data-rise>
+          <img class="pic" src="assets/headshot.png" alt="Yassine Dhouib" />
+          <div class="col">
+            <span class="nm">Presented by Yassine Dhouib</span>
+            <span class="ct">yassine.m.dhouib@gmail.com&nbsp; · &nbsp;+216 54 489 995</span>
+          </div>
+        </div>
+      </div>
+      <!-- right -->
+      <div class="grow rel flex justify-center" style="height:100%">
+        <div class="rel" data-scale style="--d:200ms">
+          <div class="phone lg" data-tilt="5" data-depth="-12"><img src="assets/new-home.jpg" alt="New ISB app — Home" /></div>
+          <div class="kpi" data-depth="26" style="position:absolute;left:-78px;bottom:46px;width:330px">
+            <div class="big"><span class="live-dot"></span><span class="amber">Live.</span></div>
+            <div class="sub">Real ISB data. On my phone.<br/>Right now.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">ISB · International School of Business</div>
+    <div class="slide-no tnum">01 / 18</div>
+  </section>
+
+  <!-- ============================ 2 · WHO I AM ============================ -->
+  <section class="s-light" data-screen-label="02 Who I am">
+    <div class="layer p-slide flex items-center" style="gap:72px">
+      <div class="rel" data-scale style="width:430px;flex:none">
+        <div class="card" style="padding:14px;border-radius:26px" data-tilt="4">
+          <img src="assets/headshot.png" alt="Yassine Dhouib" style="width:100%;border-radius:16px;display:block" />
+        </div>
+        <span class="pill amber-pill" data-depth="18" style="position:absolute;right:-26px;bottom:34px">Hello, board 👋 — wait, no emoji</span>
+      </div>
+      <div class="col grow" style="gap:24px">
+        <span class="kicker" data-rise>Who I am</span>
+        <h1 class="display" style="font-size:84px" data-rise style="--d:80ms">Student.<br/>Designer. Builder.</h1>
+        <p class="lead" style="max-width:720px" data-rise>I study at ISB Sfax — and I design and ship software. <span style="color:var(--navy);font-weight:700">Full stack developer & AI-native builder with 5+ years shipping mobile apps, digital products, and automation tools.</span></p>
+        <div class="flex" style="gap:12px;flex-wrap:wrap;margin-top:6px" data-rise style="--d:160ms">
+          <span class="pill">Product design</span>
+          <span class="pill">Mobile &amp; web dev</span>
+          <span class="pill">ISB student</span>
+        </div>
+        <p style="font-size:17px;color:var(--t-on-light-2);font-weight:600;margin-top:8px" data-fade>Fifteen seconds of credibility — then let's talk about the app.</p>
+      </div>
+    </div>
+    <div class="brand-tag">ISB Student App · Pitch</div>
+    <div class="slide-no tnum">02 / 18</div>
+  </section>
+
+  <!-- ============================ 3 · AGENDA ============================ -->
+  <section class="s-dark" data-screen-label="03 Agenda">
+    <div class="layer p-slide col" style="gap:30px">
+      <div class="flex between items-end">
+        <div class="col" style="gap:16px">
+          <span class="kicker" data-rise>Agenda</span>
+          <h1 class="display" style="font-size:76px" data-rise style="--d:60ms">What we'll cover<span class="amber">.</span></h1>
+        </div>
+        <span class="brand-chip" data-fade><img src="assets/isb-logo.png" alt="ISB" /></span>
+      </div>
+      <div class="col" style="margin-top:14px">
+        <div class="idx-row" data-rise style="--d:0ms"><div class="n tnum">01</div><div class="t">The Problem</div><div class="meta">Why the current app struggles to justify itself</div></div>
+        <div class="idx-row" data-rise style="--d:90ms"><div class="n tnum">02</div><div class="t">What I Built</div><div class="meta">A working redesign — on real ISB data</div></div>
+        <div class="idx-row" data-rise style="--d:180ms"><div class="n tnum">03</div><div class="t">What It Becomes</div><div class="meta">The roadmap that makes it more than grades</div></div>
+        <div class="idx-row" data-rise style="--d:270ms" style="border-bottom:1px solid var(--line-dark)"><div class="n tnum">04</div><div class="t">The Proposal</div><div class="meta">How we ship it — and how I'd help</div></div>
+      </div>
+    </div>
+    <div class="brand-tag">ISB Student App · Pitch</div>
+    <div class="slide-no tnum">03 / 18</div>
+  </section>
+
+  <!-- ============================ 4 · STATEMENT ============================ -->
+  <section class="s-dark" data-screen-label="04 Statement">
+    <div class="layer p-slide col justify-center">
+      <span class="kicker" data-rise style="margin-bottom:34px">The problem</span>
+      <h2 class="statement" data-rise style="--d:120ms">The current app has<br/>one real job<span class="amber">.</span></h2>
+    </div>
+    <div class="brand-tag">Section 01 · The Problem</div>
+    <div class="slide-no tnum">04 / 18</div>
+  </section>
+
+  <!-- ============================ 5 · MOODLE COMPARE ============================ -->
+  <section class="s-light" data-screen-label="05 Moodle does it better">
+    <div class="layer p-slide col" style="gap:34px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>The key argument</span>
+        <h1 class="display" style="font-size:62px" data-rise style="--d:60ms">…and Moodle already does it better.</h1>
+      </div>
+      <div class="flex grow" style="gap:40px;align-items:center">
+        <!-- Moodle (no real asset → labelled placeholder) -->
+        <div class="col grow" style="gap:14px" data-rise style="--d:120ms">
+          <!-- REPLACE: Moodle grade view screenshot -->
+          <img src="assets/moodle-grade-view.png" alt="Moodle grade view" style="width:100%; border-radius:16px; border: 1px solid var(--line-light); box-shadow: 0 4px 12px rgba(10,31,68,0.08);" />
+          <span class="flex items-center" style="gap:8px;font-weight:700;color:var(--green)"><span class="d" style="width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block"></span>The tool students already use</span>
+        </div>
+        <div class="display" style="font-size:40px;color:var(--t-on-light-2);flex:none" data-fade>vs</div>
+        <!-- current ISB app (real screenshot) -->
+        <div class="col items-center" style="gap:14px;flex:none" data-scale style="--d:160ms">
+          <div class="phone md rel" data-tilt="4">
+            <span class="tag-state old"><span class="d"></span>Current app</span>
+            <img src="assets/old-grades-emoji.jpg" alt="Current ISB app — grades with emojis" />
+          </div>
+          <span class="flex items-center" style="gap:8px;font-weight:700;color:var(--red)"><span style="width:9px;height:9px;border-radius:50%;background:var(--red);display:inline-block"></span>Same job, done worse</span>
+        </div>
+      </div>
+      <p class="lead" style="max-width:1180px" data-fade>The current app's only real function is showing grades — and it does that worse than the tool students already have open.</p>
+    </div>
+    <div class="brand-tag">Section 01 · The Problem</div>
+    <div class="slide-no tnum">05 / 18</div>
+  </section>
+
+  <!-- ============================ 6 · THE ISSUES ============================ -->
+  <section class="s-dark" data-screen-label="06 The issues">
+    <div class="layer p-slide col" style="gap:40px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>The issues</span>
+        <h1 class="display" style="font-size:62px" data-rise style="--d:60ms">None of this is hard to fix.<br/>That's the point.</h1>
+      </div>
+      <div class="issue-grid grow" style="align-content:center">
+        <div class="issue" data-rise style="--d:0ms">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <h3>Forced logout on every open</h3><p>A 2-second grade check becomes a full re-login. The headline bug.</p>
+        </div>
+        <div class="issue" data-rise style="--d:80ms">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          <h3>Emojis in a transcript</h3><p>✅👍 on an academic record reads as a toy, not an official document.</p>
+        </div>
+        <div class="issue" data-rise style="--d:160ms">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+          <h3>Raw <span class="tnum">12.00000</span></h3><p>Five decimals of database precision. No human needs that.</p>
+        </div>
+        <div class="issue" data-rise style="--d:240ms">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <h3>Gradients everywhere</h3><p>Every surface competes. No hierarchy — the defining "vibe-coded" tell.</p>
+        </div>
+        <div class="issue" data-rise style="--d:320ms">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          <h3>A filter wall nobody uses</h3><p>A search-and-filter toll booth sits above the grades you came to see.</p>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 01 · The Problem</div>
+    <div class="slide-no tnum">06 / 18</div>
+  </section>
+
+  <!-- ============================ 7 · THE 5-MIN FIX / NEED ============================ -->
+  <section class="s-light" data-screen-label="07 The 5-minute fix">
+    <div class="layer p-slide flex" style="gap:64px;align-items:center">
+      <div class="col" style="width:46%;gap:22px">
+        <span class="kicker" data-rise>Security ≠ a tradeoff</span>
+        <h1 class="display" style="font-size:58px" data-rise style="--d:60ms">A 10-minute "security feature" became a UX failure.</h1>
+        <p class="lead" data-rise>Security and usability aren't opposites. The real fix isn't a shorter session — it's a <span style="color:var(--navy);font-weight:700">"remember me" checkbox.</span> Roughly <span class="countup tnum" data-to="5" data-suffix=" minutes" style="color:var(--navy);font-weight:700">0 minutes</span> of work.</p>
+        <div class="flex items-center" style="gap:20px;margin-top:8px" data-scale style="--d:160ms">
+          <div class="phone sm rel" data-tilt="5"><span class="tag-state old"><span class="d"></span>Login wall</span><img src="assets/old-login.jpg" alt="Old login screen" /></div>
+          <p style="font-size:17px;color:var(--t-on-light-2);font-weight:600;max-width:240px">Where you land every single time you reopen the app.</p>
+        </div>
+      </div>
+      <div class="col grow" style="gap:34px">
+        <div class="card" style="padding:38px 40px" data-rise style="--d:120ms">
+          <div class="flex items-end" style="gap:20px">
+            <div class="stat"><div class="num amber countup tnum" data-to="2" style="font-size:128px">0</div></div>
+            <div class="col" style="padding-bottom:18px">
+              <div class="display" style="font-size:34px;line-height:1">app attempts<br/>in two years</div>
+            </div>
+          </div>
+          <p class="lead" style="font-size:21px;margin-top:10px">There's a real need — and real will to solve it. The execution just hasn't landed yet.</p>
+        </div>
+        <div class="timeline" data-fade>
+          <div class="tl-node"><span class="lb">Attempt&nbsp;1</span><span class="dot"></span><span class="yr">2024</span></div>
+          <div class="tl-bar"></div>
+          <div class="tl-node"><span class="lb">Attempt&nbsp;2</span><span class="dot"></span><span class="yr">2025</span></div>
+          <div class="tl-bar"></div>
+          <div class="tl-node is-now"><span class="lb amber">This</span><span class="dot"></span><span class="yr">2026</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 01 · The Problem</div>
+    <div class="slide-no tnum">07 / 18</div>
+  </section>
+
+  <!-- ============================ 8 · STATEMENT ============================ -->
+  <section class="s-dark" data-screen-label="08 Statement">
+    <div class="layer p-slide col justify-center">
+      <span class="kicker" data-rise style="margin-bottom:34px">What I built</span>
+      <h2 class="statement" data-rise style="--d:120ms">So I rebuilt it<span class="amber">.</span></h2>
+      <p class="lead" style="margin-top:34px;max-width:900px" data-fade style="--d:300ms">Not a reskin. A working app, running on real ISB data, that fixes every problem in the last section.</p>
+    </div>
+    <div class="brand-tag">Section 02 · What I Built</div>
+    <div class="slide-no tnum">08 / 18</div>
+  </section>
+
+  <!-- ============================ 9 · NEW APP AT A GLANCE ============================ -->
+  <section class="s-light" data-screen-label="09 New app at a glance">
+    <div class="layer p-slide col" style="gap:24px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>The new app</span>
+        <h1 class="display" style="font-size:60px" data-rise style="--d:60ms">A real product — at a glance.</h1>
+      </div>
+      <div class="grow rel flex items-center justify-center">
+        <div class="rel" style="width:1040px;height:560px">
+          <div class="phone md rel" data-depth="-10" data-tilt="3" style="position:absolute;left:80px;top:40px;transform:rotate(-6deg)"><img src="assets/new-home.jpg" alt="Home" /></div>
+          <div class="phone md rel" data-depth="8" data-tilt="3" style="position:absolute;left:380px;top:6px;z-index:2"><img src="assets/new-grades.jpg" alt="Notes" /></div>
+          <div class="phone md rel" data-depth="20" data-tilt="3" style="position:absolute;left:680px;top:40px;transform:rotate(6deg)"><img src="assets/new-agenda.jpg" alt="Agenda" /></div>
+          <div class="callout" data-fade style="left:0;top:80px;--d:200ms">Persistent login</div>
+          <div class="callout" data-fade style="right:-20px;top:120px;--d:280ms">Real visual hierarchy</div>
+          <div class="callout" data-fade style="left:300px;bottom:30px;--d:360ms">Clean, serious grades</div>
+          <div class="callout" data-fade style="right:120px;bottom:60px;--d:440ms">New bottom nav</div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 02 · What I Built</div>
+    <div class="slide-no tnum">09 / 18</div>
+  </section>
+
+  <!-- ============================ 10 · WALKTHROUGH ============================ -->
+  <section class="s-dark" data-screen-label="10 Walkthrough">
+    <div class="layer p-slide col" style="gap:30px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>Core functions</span>
+        <h1 class="display" style="font-size:58px" data-rise style="--d:60ms">The whole app, quickly.</h1>
+      </div>
+      <div class="flex grow justify-center items-center" style="gap:34px">
+        <div class="col items-center" style="gap:18px" data-rise style="--d:0ms"><div class="phone sm" data-tilt="4"><img src="assets/new-home.jpg" alt="Home" /></div><div class="col items-center" style="gap:4px"><span class="display" style="font-size:23px">Home</span><span style="color:var(--t-on-dark-2);font-size:15px;font-weight:600">Bento, by importance</span></div></div>
+        <div class="col items-center" style="gap:18px" data-rise style="--d:90ms"><div class="phone sm" data-tilt="4"><img src="assets/new-grades.jpg" alt="Notes" /></div><div class="col items-center" style="gap:4px"><span class="display" style="font-size:23px">Notes</span><span style="color:var(--t-on-dark-2);font-size:15px;font-weight:600">Color bands, not emoji</span></div></div>
+        <div class="col items-center" style="gap:18px" data-rise style="--d:180ms"><div class="phone sm" data-tilt="4"><img src="assets/new-messages.jpg" alt="Messages" /></div><div class="col items-center" style="gap:4px"><span class="display" style="font-size:23px">Messages</span><span style="color:var(--t-on-dark-2);font-size:15px;font-weight:600">Inbox + réclamations</span></div></div>
+        <div class="col items-center" style="gap:18px" data-rise style="--d:270ms"><div class="phone sm" data-tilt="4"><img src="assets/new-profile.jpg" alt="Profile" /></div><div class="col items-center" style="gap:4px"><span class="display" style="font-size:23px">Profile</span><span style="color:var(--t-on-dark-2);font-size:15px;font-weight:600">Student ID card</span></div></div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 02 · What I Built</div>
+    <div class="slide-no tnum">10 / 18</div>
+  </section>
+
+  <!-- ============================ 11 · FIXES MADE VISIBLE (MORPH) ============================ -->
+  <section class="s-light" data-screen-label="11 Fixes made visible">
+    <div class="layer p-slide flex" style="gap:80px;align-items:center">
+      <div class="col" style="width:42%;gap:24px">
+        <span class="kicker" data-rise>Before → after</span>
+        <h1 class="display" style="font-size:58px" data-rise style="--d:60ms">The fixes, made visible.</h1>
+        <div class="col" style="gap:18px;margin-top:6px">
+          <div class="flex" style="gap:14px;align-items:flex-start" data-rise style="--d:120ms"><span class="badge-x">1</span><p class="lead" style="font-size:20px"><b style="color:var(--navy)">Emoji grades → color bands.</b> A serious, scannable transcript.</p></div>
+          <div class="flex" style="gap:14px;align-items:flex-start" data-rise style="--d:200ms"><span class="badge-x">2</span><p class="lead" style="font-size:20px"><b style="color:var(--navy)">Gradient soup → flat bento.</b> Size and color now mean something.</p></div>
+          <div class="flex" style="gap:14px;align-items:flex-start" data-rise style="--d:280ms"><span class="badge-x">3</span><p class="lead" style="font-size:20px"><b style="color:var(--navy)">Forced login → persistent session.</b> Open, glance, done.</p></div>
+        </div>
+        <p style="font-size:16px;color:var(--t-on-light-2);font-weight:600;margin-top:8px" data-fade>Tap the card to replay the transformation.</p>
+      </div>
+      <div class="grow flex justify-center">
+        <div class="morph" data-morph data-morph-interval="2800" data-scale>
+          <div class="morph-layer is-old"><div class="phone md rel"><span class="tag-state old"><span class="d"></span>Before</span><img src="assets/old-grades-emoji.jpg" alt="Old grades" /></div></div>
+          <div class="morph-layer is-new"><div class="phone md rel"><span class="tag-state new"><span class="d"></span>After</span><img src="assets/new-grades.jpg" alt="New grades" /></div></div>
+          <span class="morph-toggle"><span class="swatch" style="background:var(--red)"></span>old<span style="opacity:.4">→</span><span class="swatch" style="background:var(--green)"></span>new</span>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 02 · What I Built</div>
+    <div class="slide-no tnum">11 / 18</div>
+  </section>
+
+  <!-- ============================ 12 · NEW VALUE ============================ -->
+  <section class="s-dark" data-screen-label="12 Beyond a report card">
+    <div class="layer p-slide col" style="gap:34px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>The new value</span>
+        <h1 class="display" style="font-size:58px" data-rise style="--d:60ms">More than a report card.</h1>
+      </div>
+      <div class="value-grid grow" style="align-content:center">
+        <div class="value" data-rise style="--d:0ms"><div class="thumb"><img src="assets/new-agenda-event.jpg" alt="Agenda" /></div><div class="col"><h3>Agenda &amp; Events</h3><p>Welcome Day, cultural week, hackathons — the campus calendar, in your pocket.</p></div></div>
+        <div class="value" data-rise style="--d:90ms"><div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17l-1.9-5.1L4.5 10l5.6-1.4z"/></svg></div><div class="col"><h3>AI Student Advisor</h3><p>An in-app advisor and grade assistant — answers, not another PDF to read.</p></div></div>
+        <div class="value" data-rise style="--d:180ms"><div class="thumb"><img src="assets/new-resources.jpg" alt="Resources" /></div><div class="col"><h3>Curated learning resources</h3><p>Coursera, freeCodeCamp, W3Schools, NotebookLM — vetted, one tap away.</p></div></div>
+        <div class="value" data-rise style="--d:270ms"><div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><div class="col"><h3>PDF transcript export</h3><p>An official, properly-formatted relevé de notes — generated on demand.</p></div></div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 02 · What I Built</div>
+    <div class="slide-no tnum">12 / 18</div>
+  </section>
+
+  <!-- ============================ 13 · STATEMENT ============================ -->
+  <section class="s-dark" data-screen-label="13 Statement">
+    <div class="layer p-slide col justify-center">
+      <span class="kicker" data-rise style="margin-bottom:34px">What it becomes</span>
+      <h2 class="statement" data-rise style="--d:120ms">This is just<br/>the start<span class="amber">.</span></h2>
+    </div>
+    <div class="brand-tag">Section 03 · What It Becomes</div>
+    <div class="slide-no tnum">13 / 18</div>
+  </section>
+
+  <!-- ============================ 14 · 3 FLAGSHIP FEATURES ============================ -->
+  <section class="s-light" data-screen-label="14 Flagship features">
+    <div class="layer p-slide col" style="gap:30px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>Three flagship bets</span>
+        <h1 class="display" style="font-size:54px" data-rise style="--d:60ms">Features worth building first.</h1>
+      </div>
+      <div class="flag-grid grow">
+        <div class="flag" data-rise style="--d:0ms">
+          <div class="n tnum">01</div>
+          <h3>Moodle two-way sync</h3>
+          <p class="scenario">One source of truth. Grades, chats and announcements mirrored both ways — so the app stops competing with Moodle and starts completing it.</p>
+          <div class="vs">
+            <div class="vs-line old"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>"Why does this even exist?"</div>
+            <div class="vs-line new"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>One login, everything in sync</div>
+          </div>
+        </div>
+        <div class="flag" data-rise style="--d:120ms">
+          <div class="n tnum">02</div>
+          <h3>Live quizzes → the "autre note"</h3>
+          <p class="scenario">The participation grade (10–30%) is usually maxed out or busywork. Turn it into Kahoot-style live quizzes — earned, fair, and actually fun.</p>
+          <div class="vs">
+            <div class="vs-line old"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>"Free 20 if the teacher likes you"</div>
+            <div class="vs-line new"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>A score you actually earned</div>
+          </div>
+        </div>
+        <div class="flag" data-rise style="--d:240ms">
+          <div class="n tnum">03</div>
+          <h3>Achievements → LinkedIn</h3>
+          <p class="scenario">Shareable milestones that nudge students toward their Master's — and quietly grow ISB's brand and alumni pipeline with every share.</p>
+          <div class="vs">
+            <div class="vs-line old"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Effort that goes unseen</div>
+            <div class="vs-line new"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>ISB on every shared post</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 03 · What It Becomes</div>
+    <div class="slide-no tnum">14 / 18</div>
+  </section>
+
+  <!-- ============================ 15 · THE OTHER 9 ============================ -->
+  <section class="s-dark" data-screen-label="15 The roadmap">
+    <div class="layer p-slide col" style="gap:32px">
+      <div class="flex between items-end">
+        <div class="col" style="gap:14px">
+          <span class="kicker" data-rise>And there's more on the table</span>
+          <h1 class="display" style="font-size:54px" data-rise style="--d:60ms">Nine more, already mapped.</h1>
+        </div>
+      </div>
+      <div class="road-grid grow" style="align-content:center">
+        <div class="road" data-rise style="--d:0ms"><span class="n tnum">04</span><div class="col"><h3>Admin console</h3><p>Manage events, users and content without touching code.</p></div></div>
+        <div class="road" data-rise style="--d:60ms"><span class="n tnum">05</span><div class="col"><h3>Student-suggested events</h3><p>AI-screened ideas, put to a student vote.</p></div></div>
+        <div class="road" data-rise style="--d:120ms"><span class="n tnum">06</span><div class="col"><h3>Teacher events &amp; forums</h3><p>Office hours, Q&amp;A and class threads in one place.</p></div></div>
+        <div class="road" data-rise style="--d:180ms"><span class="n tnum">07</span><div class="col"><h3>Teacher Stories</h3><p>Lightweight updates and reminders, the format students already read.</p></div></div>
+        <div class="road" data-rise style="--d:240ms"><span class="n tnum">08</span><div class="col"><h3>In-app mascot</h3><p>A friendly guide for onboarding and nudges — tasteful, not a toy.</p></div></div>
+        <div class="road" data-rise style="--d:300ms"><span class="n tnum">09</span><div class="col"><h3>TA role</h3><p>Teaching assistants get scoped tools between student and teacher.</p></div></div>
+        <div class="road" data-rise style="--d:360ms"><span class="n tnum">10</span><div class="col"><h3>Teacher app</h3><p>The other side of the desk — grading, attendance, messaging.</p></div></div>
+        <div class="road" data-rise style="--d:420ms"><span class="n tnum">11</span><div class="col"><h3>Leaderboards</h3><p>Class-vs-class friendly competition that drives engagement.</p></div></div>
+        <div class="road" data-rise style="--d:480ms"><span class="n tnum">12</span><div class="col"><h3>Premium study mode</h3><p>A Duolingo-style, streak-driven revision experience.</p></div></div>
+      </div>
+    </div>
+    <div class="brand-tag">Section 03 · What It Becomes</div>
+    <div class="slide-no tnum">15 / 18</div>
+  </section>
+
+  <!-- ============================ 16 · METHOD ============================ -->
+  <section class="s-light" data-screen-label="16 How we'd do it">
+    <div class="layer p-slide col" style="gap:34px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>How we'd actually do it</span>
+        <h1 class="display" style="font-size:56px" data-rise style="--d:60ms">Scrum. Sprints. No surprises.</h1>
+      </div>
+      <div class="card grow flex items-center" style="padding:8px 8px">
+        <div class="flow" style="width:100%">
+          <div class="step" data-rise style="--d:0ms"><div class="sn tnum">1</div><h3>Agree the scope</h3><p>A realistic requirements doc, signed off with the board before a line is written.</p></div>
+          <div class="step" data-rise style="--d:120ms"><div class="sn tnum">2</div><h3>Surface hidden needs</h3><p>Payment gateway (Flouci), SEO tooling, internal automations — named early.<span class="out">no scope creep</span></p></div>
+          <div class="step" data-rise style="--d:240ms"><div class="sn tnum">3</div><h3>Split into sprints</h3><p>Small, shippable increments you can see and steer every two weeks.</p></div>
+          <div class="step" data-rise style="--d:360ms"><div class="sn tnum">4</div><h3>Ship &amp; bill</h3><p>Fixed-price per sprint, or salaried. You only pay for working software.<span class="out">predictable cost</span></p></div>
+        </div>
+      </div>
+      <p class="lead" style="max-width:1100px" data-fade>"I'll tell you upfront when something's out of scope — so we don't repeat what's happened twice before."</p>
+    </div>
+    <div class="brand-tag">Section 03 · What It Becomes</div>
+    <div class="slide-no tnum">16 / 18</div>
+  </section>
+
+  <!-- ============================ 17 · THE PROPOSAL ============================ -->
+  <section class="s-dark" data-screen-label="17 The proposal">
+    <div class="layer p-slide col" style="gap:30px">
+      <div class="col" style="gap:14px">
+        <span class="kicker" data-rise>The ask</span>
+        <h1 class="display" style="font-size:58px" data-rise style="--d:60ms">Two ways forward.</h1>
+      </div>
+      <div class="prop-grid grow">
+        <div class="prop primary" data-rise style="--d:80ms">
+          <span class="badge-default">The easy yes for today</span>
+          <span class="tier">Option 1</span>
+          <h3>Paid summer internship</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ship v1 fully, this summer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>A real product in students' hands by the new year</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Low risk, fixed scope, clear deliverable</li>
+          </ul>
+          <div class="foot">Start here. Prove it. Decide the rest later.</div>
+        </div>
+        <div class="prop secondary" data-rise style="--d:200ms">
+          <span class="tier" style="color:var(--amber);opacity:1">Option 2 · the upgrade</span>
+          <h3>Junior product designer</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Lower salary year one, hybrid while I finish my degree</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full-time after graduation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tools across departments — replace paid SEO subs, automate the admin grunt-work</li>
+          </ul>
+          <div class="foot">If it makes sense for the institution, let's talk.</div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">The Proposal</div>
+    <div class="slide-no tnum">17 / 18</div>
+  </section>
+
+  <!-- ============================ 18 · THANK YOU ============================ -->
+  <section class="s-dark" data-screen-label="18 Thank you">
+    <div class="layer p-slide col justify-center" style="gap:30px">
+      <span class="brand-chip" data-rise style="align-self:flex-start"><img src="assets/isb-logo.png" alt="ISB" /></span>
+      <h1 class="display" style="font-size:140px" data-rise style="--d:80ms">Thank you<span class="amber">.</span></h1>
+      <div class="flex between items-end" data-fade style="--d:220ms">
+        <div class="presenter">
+          <img class="pic" src="assets/headshot.png" alt="Yassine Dhouib" />
+          <div class="col">
+            <span class="nm" style="font-size:22px">Yassine Dhouib</span>
+            <span class="ct">yassine.m.dhouib@gmail.com&nbsp; · &nbsp;+216 54 489 995</span>
+          </div>
+        </div>
+        <div class="kpi" style="width:330px">
+          <div class="big"><span class="live-dot"></span><span class="amber">Live.</span></div>
+          <div class="sub">Still on my phone. Still real.<br/>Let's ship it.</div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-tag">ISB · International School of Business</div>
+    <div class="slide-no tnum">18 / 18</div>
+  </section>
+
+</deck-stage>
+
+<!-- speaker notes placeholder (empty — none requested) -->
+<script src="deck-stage.js"></script>
+<script src="deck.js"></script>
+</body>
+</html>
